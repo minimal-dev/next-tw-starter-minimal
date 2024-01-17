@@ -1,0 +1,52 @@
+{
+  "name": "next-starter-minimal",
+  "description": "A simple starter to get up and developing quickly with Next.js",
+  "version": "1.0",
+  "private": true,
+  "author": "salexpro <dev@salex.pro>",
+  "dependencies": {
+    "@svgr/webpack": "^8.0.0",
+    "@types/node": "^20.3.1",
+    "@types/react": "^18.2.12",
+    "@types/react-dom": "^18.2.5",
+    "bootstrap": "latest",
+    "classnames": "2.5.1",
+    "gsap": "latest",
+    "next": "latest",
+    "next-classnames-minifier": "^2.0.0",
+    "react": "latest",
+    "react-bootstrap": "latest",
+    "react-dom": "latest",
+    "sass": "latest",
+    "sharp": "^0.33.0"
+  },
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev",
+    "start": "next dev",
+    "serve": "next start",
+    "format": "prettier --ignore-path .gitignore --write \"**/*.{js,jsx,ts,tsx,json,mdx,md,css,scss}\"",
+    "lint": "next lint",
+    "copy-bs-settings": "node ./scripts/copy-bs-settings.js",
+    "prepare": "husky install && npm run copy-bs-settings",
+    "cz": "cz"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "18.4.4",
+    "@commitlint/config-conventional": "18.4.4",
+    "@next/bundle-analyzer": "^14.0.0",
+    "eslint": "^8.39.0",
+    "eslint-config-next": "latest",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-plugin-json": "3.1.0",
+    "eslint-plugin-prettier": "5.1.3",
+    "eslint-plugin-react": "7.33.2",
+    "husky": "8.0.3",
+    "nano-staged": "^0.8.0",
+    "prettier": "3.2.2",
+    "stylelint": "16.1.0",
+    "stylelint-config-recess-order": "4.4.0",
+    "stylelint-config-standard-scss": "13.0.0",
+    "stylelint-prettier": "5.0.0"
+  }
+}
