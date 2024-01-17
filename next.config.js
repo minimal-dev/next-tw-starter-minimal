@@ -1,9 +1,6 @@
 /** @type {import('next').NextConfig} */
 
-const withClassnamesMinifier = require('next-classnames-minifier').default
 const withBundleAnalyzer = require('@next/bundle-analyzer')
-
-const productionBranchNames = ['master', 'main']
 
 const isProductionBuild = process.env.NODE_ENV === 'production'
 
@@ -13,24 +10,13 @@ const isCloudBuild =
   // Vercel
   process.env.VERCEL
 
-const isProductionDeployment =
-  // Cloudflare
-  productionBranchNames.includes(process.env.CF_PAGES_BRANCH) ||
-  // Vercel
-  process.env.NEXT_PUBLIC_VERCEL_ENV === 'production'
-
 const nextConfig = {
   trailingSlash: false,
   experimental: {
     appDir: true,
-    // serverComponentsExternalPackages: ['react-bootstrap'],
   },
 
   modularizeImports: {
-    'react-bootstrap': {
-      transform: 'react-bootstrap/{{member}}',
-      preventFullImport: true,
-    },
     lodash: {
       transform: 'lodash/{{member}}',
       preventFullImport: true,
@@ -76,12 +62,6 @@ const nextConfig = {
 
 module.exports = () => {
   const plugins = []
-
-  if (
-    (isCloudBuild && isProductionDeployment) ||
-    (!isCloudBuild && isProductionBuild)
-  )
-    plugins.push(withClassnamesMinifier())
 
   const bundleAnalyzerCondition = !isCloudBuild && isProductionBuild
 

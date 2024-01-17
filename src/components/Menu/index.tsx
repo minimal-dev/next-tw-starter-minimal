@@ -1,13 +1,11 @@
 'use client'
 
 import React from 'react'
+import * as NavigationMenu from '@radix-ui/react-navigation-menu'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
-import { Nav } from 'react-bootstrap'
-import cn from 'classnames'
 import gsap from 'gsap'
 import ScrollToPlugin from 'gsap/ScrollToPlugin'
-
 import MENU from './constants'
 
 gsap.registerPlugin(ScrollToPlugin)
@@ -30,21 +28,22 @@ const Menu = ({ variant }: MenuProps) => {
   }
 
   return (
-    <Nav className={cn({ [`nav--${variant}`]: variant })} as="ul">
-      {MENU.map(({ name, link }) => (
-        <Nav.Item as="li" key={name}>
-          {isHomepage ? (
-            <Nav.Link href={link} onClick={(e) => handleScroll(e, link)}>
-              {name}
-            </Nav.Link>
-          ) : (
-            <Nav.Link as={Link} href={`/${link}`}>
-              {name}
-            </Nav.Link>
-          )}
-        </Nav.Item>
-      ))}
-    </Nav>
+    <NavigationMenu.Root>
+      <NavigationMenu.List className="flex flex-wrap">
+        {MENU.map(({ name, link }) => (
+          <NavigationMenu.Item key={name}>
+            <NavigationMenu.Link
+              href={link}
+              onClick={(e) => handleScroll(e, link)}
+              asChild={!isHomepage}
+              className="block px-4 py-2 text-blue-500 transition-colors hover:text-blue-700"
+            >
+              {isHomepage ? name : <Link href={`/${link}`}>{name}</Link>}
+            </NavigationMenu.Link>
+          </NavigationMenu.Item>
+        ))}
+      </NavigationMenu.List>
+    </NavigationMenu.Root>
   )
 }
 

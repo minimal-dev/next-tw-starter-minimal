@@ -1,34 +1,36 @@
 {
-  "name": "next-starter-minimal",
-  "description": "A simple starter to get up and developing quickly with Next.js",
+  "name": "next-tw-starter-minimal",
+  "description": "A simple starter to get up and developing quickly with Next.js & Tailwind",
   "version": "1.0",
   "private": true,
-  "author": "salexpro <dev@salex.pro>",
+  "author": "T4RK0 <taras.galaburda@outlook.com>",
   "dependencies": {
+    "@radix-ui/react-navigation-menu": "^1.1.4",
     "@svgr/webpack": "^8.0.0",
     "@types/node": "^20.3.1",
     "@types/react": "^18.2.12",
     "@types/react-dom": "^18.2.5",
-    "bootstrap": "latest",
-    "classnames": "2.5.1",
+    "autoprefixer": "^10.4.16",
+    "clsx": "^2.1.0",
     "gsap": "latest",
     "next": "latest",
-    "next-classnames-minifier": "^2.0.0",
+    "postcss": "^8.4.33",
+    "prettier-plugin-tailwindcss": "^0.5.11",
     "react": "latest",
-    "react-bootstrap": "latest",
     "react-dom": "latest",
-    "sass": "latest",
-    "sharp": "^0.33.0"
+    "sharp": "^0.33.0",
+    "stylelint-config-tailwindcss": "^0.0.7",
+    "tailwind": "^4.0.0",
+    "tailwind-variants": "^0.1.20"
   },
   "scripts": {
     "build": "next build",
     "dev": "next dev",
     "start": "next dev",
     "serve": "next start",
-    "format": "prettier --ignore-path .gitignore --write \"**/*.{js,jsx,ts,tsx,json,mdx,md,css,scss}\"",
+    "format": "prettier --ignore-path .gitignore --write \"**/*.{js,jsx,ts,tsx,json,mdx,md,css}\"",
     "lint": "next lint",
-    "copy-bs-settings": "node ./scripts/copy-bs-settings.js",
-    "prepare": "husky install && npm run copy-bs-settings",
+    "prepare": "husky install",
     "cz": "cz"
   },
   "devDependencies": {
@@ -46,7 +48,6 @@
     "prettier": "3.2.2",
     "stylelint": "16.1.0",
     "stylelint-config-recess-order": "4.4.0",
-    "stylelint-config-standard-scss": "13.0.0",
     "stylelint-prettier": "5.0.0"
   }
 }
