@@ -15,6 +15,7 @@ const epilogue = Epilogue({
 })
 
 export const metadata = {
+  metadataBase: new URL('https://next-tw.starter.min.studio/'),
   title: {
     template: '%s | Minimal Next & Tailwind Starter',
     default: 'Minimal Next & Tailwind Starter',

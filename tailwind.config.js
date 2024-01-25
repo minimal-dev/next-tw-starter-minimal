@@ -8,5 +8,10 @@ module.exports = {
       ...defaultTheme.screens,
       '2xl': '1440px',
     },
+    extends: {
+      colors: {
+        // Set colors here
+      },
+    },
   },
 }
