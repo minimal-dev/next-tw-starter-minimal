@@ -5,8 +5,8 @@
       "~img/*": ["./src/assets/img/*"],
       "~icons/*": ["./src/assets/icons/*"],
       "~fonts/*": ["./src/assets/fonts/*"],
-      "~*": ["./src/*"]
-    }
+      "~*": ["./src/*"],
+    },
   },
-  "exclude": ["node_modules", "public"]
+  "exclude": ["node_modules", "public"],
 }
