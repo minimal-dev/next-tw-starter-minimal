@@ -16,16 +16,16 @@
     "jsx": "preserve",
     "plugins": [
       {
-        "name": "next"
-      }
+        "name": "next",
+      },
     ],
     "paths": {
       "~img/*": ["./src/assets/img/*"],
       "~icons/*": ["./src/assets/icons/*"],
       "~fonts/*": ["./src/assets/fonts/*"],
-      "~*": ["./src/*"]
-    }
+      "~*": ["./src/*"],
+    },
   },
   "include": ["next-env.d.ts", ".next/types/**/*.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules"],
 }
