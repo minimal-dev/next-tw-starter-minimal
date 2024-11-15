@@ -21,7 +21,7 @@
     "sharp": "^0.33.0",
     "stylelint-config-tailwindcss": "^0.0.7",
     "tailwind": "^4.0.0",
-    "tailwind-variants": "^0.2.0"
+    "tailwind-variants": "^0.3.0"
   },
   "scripts": {
     "build": "next build",
