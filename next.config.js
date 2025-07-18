@@ -12,9 +12,6 @@ const isCloudBuild =
 
 const nextConfig = {
   trailingSlash: false,
-  experimental: {
-    appDir: true,
-  },
 
   modularizeImports: {
     lodash: {
