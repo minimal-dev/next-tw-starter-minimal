@@ -15,7 +15,7 @@ const Home = () => {
       <p className="mb-4">Now go build something great.</p>
       {/* Example of Next Image */}
       <p className="mb-4">
-        <Image src={ogImage} width="650" alt="Image" placeholder="blur" />
+        <Image src={ogImage} width="650" alt="Image" priority />
       </p>
       <p className="mb-4">
         <Image src={NextLogo} alt="Nextjs Logo" />

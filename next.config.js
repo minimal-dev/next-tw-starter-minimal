@@ -20,6 +20,10 @@ const nextConfig = {
     },
   },
 
+  images: {
+    formats: ['image/avif', 'image/webp'],
+  },
+
   webpack(config, options) {
     // Grab the existing rule that handles SVG imports
     const fileLoaderRule = config.module.rules.find((rule) =>

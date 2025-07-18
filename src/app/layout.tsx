@@ -33,7 +33,11 @@ export const metadata = {
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en">
-      <body className={epilogue.variable} style={{ minWidth: 360 }}>
+      <body
+        className={epilogue.variable}
+        style={{ minWidth: 360 }}
+        suppressHydrationWarning
+      >
         <Header title={metadata.title?.default} />
         <main className="main">{children}</main>
         <Footer title={metadata.title?.default} />
