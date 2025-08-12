@@ -38,8 +38,6 @@ module.exports = defineConfig([
 
       'arrow-body-style': 'off',
       'react/jsx-props-no-spreading': 'off',
-      'react/prop-types': 'warn',
-      'react/forbid-prop-types': 'off',
       'import/prefer-default-export': 'off',
       'react/state-in-constructor': 'off',
 
@@ -50,13 +48,7 @@ module.exports = defineConfig([
         },
       ],
 
-      'react/function-component-definition': [
-        'error',
-        {
-          namedComponents: 'arrow-function',
-          unnamedComponents: 'arrow-function',
-        },
-      ],
+      'react/function-component-definition': 'off',
 
       'id-match': [
         'error',
